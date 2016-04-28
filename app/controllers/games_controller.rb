@@ -3,6 +3,11 @@ class GamesController < ApplicationController
 
   def index
     @games = @category.games
+
+    respond_to do |format|
+      format.html
+      format.json { render json: { category: @category, games: @games } }
+    end
   end
 
   def show
