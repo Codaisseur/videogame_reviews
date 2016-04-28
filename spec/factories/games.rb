@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :game do
-    title "MyString"
-    cover_image "MyString"
-    category nil
+    title { Faker::Name.name }
+    cover_image { Faker::Avatar.image }
+    category
   end
 end
